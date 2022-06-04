@@ -10,6 +10,7 @@
     --primary-backgroud-color: #F5F4FA;
     --footer-hero-background-color:#2F303A;
     --hero-backround-color:#C4C4C4;
+    --primary-icons-color: #AFB1B8;
 }
 h1,
 h2,
@@ -81,9 +82,6 @@ img{
 .nav-menu-item:not(:last-child){
     margin-right: 50px;
 }
-.contacts-list{
-    display: flex;
-}
 .header{
     background-color: var(--primary-title-color);
     border-bottom: 1px solid #ECECEC
@@ -110,6 +108,7 @@ img{
     color: var(--secondary-text-color)
 }
 .contacts-list{
+    display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -119,6 +118,14 @@ img{
 }
 .contacts-list-item:not(:last-child){
     margin-right: 50px;
+}
+.contacts-list-icons{
+    fill: #757575;
+    margin-right: 10px;
+}
+.contacts-list-icons:focus,
+.contacts-list-icons:hover{
+    fill: var(--accent-color);
 }
 .nav-menu-list{
     padding-top: 32px;
@@ -148,7 +155,6 @@ img{
     color: var(--primary-title-color);
     margin-bottom: 30px;
     margin-top: 0;
-    
 }
 .hero-button-text{
     font-family: inherit;
@@ -172,7 +178,7 @@ img{
     padding: 10px 32px;
     
 }
-.hero-button:hover
+.hero-button:hover,
 .hero-button:focus{
     background: #188CE8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -190,23 +196,19 @@ img{
     height: 600px;
     margin-left: auto;
     margin-right: auto;
-    
+    background: #C4C4C4;
     background-image:linear-gradient(
     to right,
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)
-    ), url(../images/Hero-Img.jpg)
+    ), url(../images/hero-img.jpg)
 }
-
-    
-
-
+   
 /* Our Features */
 .section{
     padding-bottom: 94px;
     padding-top: 94px;
 }
-
 .features-list{
     display: flex;
     flex-wrap: wrap;
@@ -231,6 +233,16 @@ img{
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+}
+.features-list-icon-link{ 
+    display: flex;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background: var(--primary-backgroud-color);
+    border-radius: 4px;
 }
 /* Our Services */
 .services {
@@ -293,11 +305,84 @@ img{
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+    margin-bottom: 16px;
 }
 .team-card-content{
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.social-network{
+    display: flex;
+    justify-content: center;
+}
+.social-network-item{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.social-network-item:hover{
+    background: var(--accent-color);
+}
+.social-network-item:not(:last-child){
+    margin-right: 10px;
+}
+.social-icon{
+    fill: var(--primary-icons-color);
+}
+.social-network-item:hover .social-icon{
+    fill: var(--primary-title-color);
+}
+.social-network-link:focus .social-icon{
+    fill: var(--primary-title-color);
+}
+.social-network-link:focus .social-network-item{
+    background-color: var(--accent-color);
+}
+/* Our Clients */
+.clients-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+    margin-bottom: 50px;
+}
+.client-list{
+    display: flex;
+    justify-content: center;
+}
+.clients-list-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 5%;
+}
+.clients-list-item:not(:last-child){
+    margin-right:30px;
+}
+.client-icon{
+    fill: var(--primary-icons-color);
+}
+.clients-list-item:hover .client-icon{
+    fill: var(--accent-color);
+}
+.clients-list-item:hover{
+    border-color: var(--accent-color);
+}
+.clients-link:focus .client-icon{
+    fill: var(--accent-color);
+}
+.clients-link:focus .clients-list-item{
+    border-color: var(--accent-color);
+}
+
 /* Footer */
 .footer{
     padding-top: 60px;
@@ -312,10 +397,6 @@ img{
     letter-spacing: 0.03em;
     color: var(--primary-title-color);
     margin-bottom: 20px;
-    /* margin-top: 60px;   */
-}
-.footer-content{
-    
 }
 .map-link{
     font-size: 14px;
@@ -339,9 +420,6 @@ img{
 }
 .address{
     font-style: normal;
-}
-.address-list{
-    /* margin-bottom: 60px; */
 }
 .address-list-item:not(:last-child){
     margin-bottom: 9px;
