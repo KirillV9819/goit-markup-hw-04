@@ -101,6 +101,8 @@ img{
     color: var(--accent-color);
 }
 .contact-link{
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -111,6 +113,10 @@ img{
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
+}
+.contacts-list-item{
+    display: flex;
+    align-items: center;
 }
 .contact-link:hover,
 .contact-link:focus{
@@ -190,8 +196,6 @@ img{
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-}
-.hero-overlay{
     width: 1600px;
     height: 600px;
     margin-left: auto;
@@ -201,7 +205,10 @@ img{
     to right,
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)
-    ), url(../images/Hero-Img.jpg)
+    ), url(../images/Hero-Img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
    
 /* Our Features */
@@ -373,7 +380,6 @@ img{
 }
 .client-icon{
     fill: var(--primary-icons-color);
-    margin: 16px 32px;
 }
 .clients-link:hover .client-icon,
 .clients-link:focus .client-icon{
@@ -418,7 +424,8 @@ img{
     color: var(--accent-color);
 }
 .footer-content{
-    display: flex;  
+    display: flex;
+    align-items: baseline;  
 }
 .footer-left{
     margin-right: 70px;
@@ -428,10 +435,6 @@ img{
 }
 .address-list-item:not(:last-child){
     margin-bottom: 9px;
-}
-.our-social-networks{
-    margin-bottom: 40px;
-    margin-top: 12px;
 }
 .our-social-networks-list{
     display: flex;
@@ -505,15 +508,12 @@ img{
 }
 /* Projects */
 .project-card-link{
-    width: 100%;
-    height: 100%;
     display: block;
     color: inherit;
     text-decoration: none;
 }
-.project-card-link:hover{
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
+.project-card-link:hover,
+.project-card-link:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-name{
@@ -539,8 +539,7 @@ img{
     flex-wrap: wrap;
 }
 .project-card{
-    /* flex-basis: calc((100% - 270px) / 9); */
-    width: calc((100% - 60px) / 3);
+    flex-basis: calc((100% - 270px) / 9);
 }
 .project-card:not(:nth-child(3n)){
     margin-right: 30px;
