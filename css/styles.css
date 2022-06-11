@@ -46,6 +46,11 @@ img{
     box-sizing: border-box;
     display: block;
 }
+:hover,
+:focus{
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .container{
     width: 1200px;
     margin-left: auto;
@@ -98,6 +103,8 @@ img{
     color: var(--primary-text-color);
 
     position: relative;
+
+    transition-property: color;
 }
 .menu-link:hover,
 .menu-link:focus{
@@ -134,10 +141,18 @@ img{
 .contact-link{
     padding-top: 32px;
     padding-bottom: 32px;
+
+    transition-property: color;
 }
 .contact-link:hover,
 .contact-link:focus{
     color: var(--accent-color)
+}
+.contact-icon{
+    fill: #757575;
+    margin-right: 10px;
+
+    transition-property: fill;
 }
 .contact-link:hover .contact-icon,
 .contact-link:focus .contact-icon{
@@ -145,10 +160,6 @@ img{
 }
 .contacts-list-item:not(:last-child){
     margin-right: 50px;
-}
-.contact-icon{
-    fill: #757575;
-    margin-right: 10px;
 }
 .logo{
     color: #000000;
@@ -163,6 +174,7 @@ img{
 .web {
     color: var(--accent-color);
 }
+
 /* main content */
 /* HERO */
 .hero-title{
@@ -197,15 +209,12 @@ img{
     cursor: pointer;
     padding: 10px 32px;
     
+    transition-property: background-color;
 }
 .hero-button:hover,
 .hero-button:focus{
     background: #188CE8;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
 }
-
-
 .hero{
     text-align: center;
     padding-top: 200px;
@@ -265,6 +274,7 @@ img{
     background: var(--primary-backgroud-color);
     border-radius: 4px;
 }
+
 /* Our Services */
 .services {
     padding-top: 0px;
@@ -278,6 +288,15 @@ img{
     color: var(--primary-text-color);
     margin-bottom: 50px;
 }
+.service-list-overlay-text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-title-color);
+}
 .services-list{
     display: flex;
     flex-wrap: wrap;
@@ -285,6 +304,20 @@ img{
 .services-list-item:not(:nth-child(3n)){
     margin-right: 30px;
 }
+.service-list-overlay{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.service-list-overlay-text{
+    position: absolute;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background: rgba(47, 48, 58, 0.8);
+}
+
 /*Team Title*/
 .team{
     background: var(--primary-backgroud-color);
@@ -350,9 +383,13 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition-property: background-color;
 }
 .social-icon{
     fill: var(--primary-icons-color);
+
+    transition-property: fill;
 }
 .social-network-link:hover .social-icon,
 .social-network-link:focus .social-icon{
@@ -391,9 +428,13 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition-property: border-color;
 }
 .client-icon{
     fill: var(--primary-icons-color);
+
+    transition-property: fill;
 }
 .clients-link:hover .client-icon,
 .clients-link:focus .client-icon{
@@ -432,6 +473,8 @@ img{
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+
+    transition-property: color;
 }
 .address-link:hover,
 .address-link:focus{
@@ -481,6 +524,8 @@ img{
     align-items: center;
     fill: var(--primary-title-color);
     background: rgba(255, 255, 255, 0.1);
+
+    transition-property: background-color;
 }
 .our-social-network-link:hover,
 .our-social-network-link:focus{
@@ -498,14 +543,6 @@ img{
 .menu-buttons:not(:last-child){
     margin-right: 8px;
 }
-.button:hover,
-.button:focus{
-    color: var(--primary-title-color);
-    background: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    border: none;
-}
 .button{
     font-family: inherit;
     font-weight: 500;
@@ -519,12 +556,23 @@ img{
     cursor: pointer;
     border: none;
     padding: 6px 22px;
+
+    transition-property: color, background-color, box-shadow, border-radius;
+}
+.button:hover,
+.button:focus{
+    color: var(--primary-title-color);
+    background: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 /* Projects */
 .project-card-link{
     display: block;
     color: inherit;
     text-decoration: none;
+
+    transition-property: box-shadow;
 }
 .project-card-link:hover,
 .project-card-link:focus{
