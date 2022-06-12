@@ -46,14 +46,6 @@ img{
     box-sizing: border-box;
     display: block;
 }
-:hover{
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-:focus{
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 .container{
     width: 1200px;
     margin-left: auto;
@@ -108,6 +100,8 @@ img{
     position: relative;
 
     transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover,
 .menu-link:focus{
@@ -146,6 +140,8 @@ img{
     padding-bottom: 32px;
 
     transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover,
 .contact-link:focus{
@@ -156,6 +152,8 @@ img{
     margin-right: 10px;
 
     transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover .contact-icon,
 .contact-link:focus .contact-icon{
@@ -213,6 +211,8 @@ img{
     padding: 10px 32px;
     
     transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus{
@@ -388,11 +388,15 @@ img{
     align-items: center;
 
     transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon{
     fill: var(--primary-icons-color);
 
     transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-network-link:hover .social-icon,
 .social-network-link:focus .social-icon{
@@ -433,11 +437,16 @@ img{
     align-items: center;
 
     transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon{
     fill: var(--primary-icons-color);
 
     transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .clients-link:hover .client-icon,
 .clients-link:focus .client-icon{
@@ -478,6 +487,8 @@ img{
     color: rgba(255, 255, 255, 0.6);
 
     transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover,
 .address-link:focus{
@@ -529,6 +540,8 @@ img{
     background: rgba(255, 255, 255, 0.1);
 
     transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-social-network-link:hover,
 .our-social-network-link:focus{
@@ -561,6 +574,8 @@ img{
     padding: 6px 22px;
 
     transition-property: color, background-color, box-shadow, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus{
@@ -576,6 +591,8 @@ img{
     text-decoration: none;
 
     transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-card-link:hover,
 .project-card-link:focus{
@@ -640,10 +657,55 @@ img{
     transform: translateY(100%);
     overflow: auto;
 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-card-link:hover .project-card-overlay-text,
 .project-card-link:focus .project-card-overlay-text{
     transform: translateY(0%);
 }
+/* Modal */
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity , visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal{
+    position: absolute;
+    width: 528px;
+    height: 580px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.modal-close-button{
+    background-color: transparent;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
 
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
